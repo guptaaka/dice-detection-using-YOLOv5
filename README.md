@@ -1,12 +1,20 @@
-How to train the model that detects classes of dice/coins in a given image:
+How to train the model that detects classes of dice/coins in a given image, using [YOLOv5](https://github.com/ultralytics/yolov5):
 
 The model can be trained either on your own/custom machine or the NEU discovery cluster. The latter one requires a Northeastern University account. (Docs: https://rc-docs.northeastern.edu/en/latest/welcome/welcome.html). Would highly recommend using a GPU for this task, as training takes quite a bit of resources and time to complete. It took ~4 hours on a p100 GPU (https://rc-docs.northeastern.edu/en/latest/using-discovery/workingwithgpu.html).
 
-If you're using your custom machine (which is not the NEU Discovery cluster), you can stop reading here and follow the steps on [train_on_own_machine.md](https://github.com/guptaaka/coin-detection/blob/master/train_on_own_machine.md).
+### If you're using your custom machine (which is not the NEU Discovery cluster), you can stop reading here and follow the steps on [train_on_own_machine.md](https://github.com/guptaaka/coin-detection/blob/master/train_on_own_machine.md).
+
+# Steps for running on Northeastern Univeristy Discovery cluster
 
 Connect to the Discovery cluster: ssh <NEU-username>@login.discovery.neu.edu
 
 Run **Step I** and **Step II** from the [train_on_own_machine.md](https://github.com/guptaaka/coin-detection/blob/master/train_on_own_machine.md) file, to get the dataset ready.
+
+  Example image (The model would detect the labels and bouding boxes for the two dice/coins in the images):
+  
+  ![image](https://user-images.githubusercontent.com/23294197/149733638-bbc43262-76d3-4f7c-877b-e0fa0f8c5411.jpeg)
+  ![image](https://user-images.githubusercontent.com/23294197/149734324-0a5a2049-b19c-406c-b8c7-6097c84264db.png)
+
 
 **Step III. Create the PyTorch environment by running below commands.**
 
