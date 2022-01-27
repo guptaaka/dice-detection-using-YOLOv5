@@ -16,7 +16,7 @@ Run **Step I** and **Step II** from the [train_on_own_machine.md](https://github
   ![image](https://user-images.githubusercontent.com/23294197/149734324-0a5a2049-b19c-406c-b8c7-6097c84264db.png)
 
 
-**Step III. Create the PyTorch environment by running below commands.**
+**Step III. [Optional, only to test if you can really get connected to a GPU] Create the PyTorch environment by running below commands.**
 
 ```
 srun --partition=gpu --nodes=1 --pty --export=All --gres=gpu:1 --mem=4G --time=01:00:00 /bin/bash 
