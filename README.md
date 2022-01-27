@@ -52,7 +52,7 @@ echo $(python -c'import torch; print(torch.cuda.is_available());')
 echo $(python -c 'import torch; print(torch.cuda.current_device())')
 echo $(python -c'import torch; print(torch.cuda.get_device_properties(torch.cuda.current_device()));')
 echo $(python -c'import torch; print(min((int(arch.split("_")[1]) for arch in torch.cuda.get_arch_list()), default=35))')
-time python train.py --epochs 80 --data ./data.yaml --cfg ./models/custom_yolov5s.yaml --weights '' --name yolov5s_results_initial --batch-size=12
+time python train.py --epochs 80 --data ./dicedataset/data.yaml --cfg ./models/custom_yolov5s.yaml --weights '' --name yolov5s_results_initial --batch-size=12
 ```
   
 **Step V. Run the batch file to start training the model. Note the job ID after running the command below.**
