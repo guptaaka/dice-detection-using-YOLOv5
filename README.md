@@ -34,13 +34,13 @@ python -c'import torch; print(torch.cuda.is_available())'
 
 ```
 #!/bin/bash
-#SBATCH --time=5:00:00
-#SBATCH --job-name=yolov5_80
+#SBATCH --time=8:00:00
+#SBATCH --job-name=yolov5_65
 #SBATCH --mem=3G
 #SBATCH --export=All
 #SBATCH --gres=gpu:p100:1
 #SBATCH --partition=gpu
-#SBATCH --output=output_80epochs/exec.%j.out
+#SBATCH --output=output_65epochs/exec.%j.out
 module load cuda/11.3
 module load anaconda3/2021.05
 source /shared/centos7/anaconda3/2021.05/etc/profile.d/conda.sh
@@ -52,12 +52,12 @@ echo $(python -c'import torch; print(torch.cuda.is_available());')
 echo $(python -c 'import torch; print(torch.cuda.current_device())')
 echo $(python -c'import torch; print(torch.cuda.get_device_properties(torch.cuda.current_device()));')
 echo $(python -c'import torch; print(min((int(arch.split("_")[1]) for arch in torch.cuda.get_arch_list()), default=35))')
-time python train.py --epochs 80 --data ./dicedataset/data.yaml --cfg ./models/custom_yolov5s.yaml --weights '' --name yolov5s_results_initial --batch-size=12
+time python train.py --epochs 65 --data ./dicedataset/data.yaml --cfg ./models/custom_yolov5s.yaml --weights '' --name yolov5s_results_initial --batch-size=12
 ```
   
 **Step V. Run the batch file to start training the model. Note the job ID after running the command below.**
 ```
-mkdir output_80epochs # to store logs
+mkdir output_65epochs # to store logs
 sbatch runModel.batch
 ```
 **Step VI. Wait until the batch runs completely. You can run the below commands to check the job status,**
@@ -67,7 +67,7 @@ squeue -u <username>
 ```
 or, you can also check the output from this batch file. For instance, if you want to check the output of your print statements from the batch file.
 ```
-less</cat/tail> output_80epochs/exec.<jobID>.out
+less</cat/tail> output_65epochs/exec.<jobID>.out
 ```
 **Step V. Test.**
 
