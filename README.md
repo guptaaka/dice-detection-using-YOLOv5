@@ -57,6 +57,7 @@ time python train.py --epochs 80 --data ./dicedataset/data.yaml --cfg ./models/c
   
 **Step V. Run the batch file to start training the model. Note the job ID after running the command below.**
 ```
+mkdir output_80epochs # to store logs
 sbatch runModel.batch
 ```
 **Step VI. Wait until the batch runs completely. You can run the below commands to check the job status,**
