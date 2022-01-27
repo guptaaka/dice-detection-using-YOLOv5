@@ -21,10 +21,12 @@ mkdir -p dicedataset
 cd dicedataset
 curl -L "https://public.roboflow.com/ds/yJwlTSkNrQ?key=OiVqh5lSem" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
 ```
+Make sure you have *train*, *test* and *valid* directories on the same level as the *yolov5/* directory.
 
 * or, download the dice dataset from Google drive link by using the _download_dice_dataset.py_ script. This dataset has already been exploded into huge number of images and divided into 3 chunks for training, validation and testing in the 70:20:10 ratio, the data has been exploded by using the same logic as present in the _multiply_dataset.py_ script. Along with this dataset, you'll still need the metadata files fom the Roboflow data directly. So, make sure to downalod those files from the Roboflow link posted above.
 
 ```
+cd ..
 python download_dice_dataset.py
 ```
 
