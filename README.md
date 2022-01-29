@@ -76,6 +76,6 @@ Test can be run either on CPU or GPU. I ran on the GPU by following the same ste
 ```
 time python detect.py --weights runs/train/yolov5s_results_initial/weights/best.pt --conf-thres 0.6 --source ../test/images --save-txt --save-conf
 ```
-Open the log file and check the directory path where results are saved. You are looking for a line similar to this one, "2553 labels saved to runs/detect/exp7/labels". Edit the script *eval.py* with the correct directory path and run it. This script prints out the number of images that were detected correctly in entirety.
+Open the log file and check the directory path where results are saved. You are looking for a line similar to this one, "2553 labels saved to runs/detect/exp7/labels". Edit the script *[eval.py](https://github.com/guptaaka/coin-detection/blob/master/eval.py)* with the correct directory path and run it. This script prints out the number of images that were detected correctly in entirety.
 
 A huge thanks to Dr Ravi Sundaram and Khoury College at Northeastern University!
