@@ -14,7 +14,7 @@ cd yolov5
 
 You can either
 
-* download the dice dataset from Roboflow. It has less number of data points, so the images dataset can be exploded by using the [_multiply_dataset.py](https://github.com/guptaaka/dice-detection-using-YOLOv5/blob/master/multiply_dataset.py)_ script. After this is done, you can divide the entire dataset into three buckets Train, Valid and Test. I used 70:20:10 split. Make sure to split the dataset smartly, in that each of the three directories should have a good number of images belonging to each class, and a good split also in terms of number of dice in an image and classes of dice in that image.
+* download the dice dataset from Roboflow. It has less number of data points, so the images dataset can be exploded by using the _[multiply_dataset.py](https://github.com/guptaaka/dice-detection-using-YOLOv5/blob/master/multiply_dataset.py)_ script. After this is done, you can divide the entire dataset into three buckets Train, Valid and Test. I used 70:20:10 split. Make sure to split the dataset smartly, in that each of the three directories should have a good number of images belonging to each class, and a good split also in terms of number of dice in an image and classes of dice in that image.
 
 ```
 mkdir -p dicedataset
