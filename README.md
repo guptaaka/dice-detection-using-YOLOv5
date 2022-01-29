@@ -71,7 +71,7 @@ less</cat/tail> output_65epochs/exec.<jobID>.out
 ```
 **Step V. Test.**
 
-Test can be run either on CPU or GPU. I ran on the GPU by following the same steps as in Step IV above, but this time with the command below.
+Test can be run either on CPU or GPU. I ran on the GPU by following the same steps as in Step IV above, but this time with the command below. It takes about 2-3 minutes to finish, so you can request a different GPU for less amount of time. 
 
 ```
 time python detect.py --weights runs/train/yolov5s_results_initial/weights/best.pt --conf-thres 0.6 --source ../test/images --save-txt --save-conf
