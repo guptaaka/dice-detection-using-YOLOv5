@@ -14,7 +14,7 @@ cd yolov5
 
 You can either
 
-* download the dice dataset from Roboflow. It has less number of data points, so the images dataset can be exploded by using the _multiply_dataset.py_ script. After this is done, you can divide the entire dataset into three buckets Train, Valid and Test. I used 70:20:10 split. Make sure to split the dataset smartly, in that each of the three directories should have a good number of images belonging to each class, and a good split also in terms of number of dice in an image and classes of dice in that image.
+* download the dice dataset from Roboflow. It has less number of data points, so the images dataset can be exploded by using the [_multiply_dataset.py](https://github.com/guptaaka/dice-detection-using-YOLOv5/blob/master/multiply_dataset.py)_ script. After this is done, you can divide the entire dataset into three buckets Train, Valid and Test. I used 70:20:10 split. Make sure to split the dataset smartly, in that each of the three directories should have a good number of images belonging to each class, and a good split also in terms of number of dice in an image and classes of dice in that image.
 
 ```
 mkdir -p dicedataset
@@ -23,7 +23,7 @@ curl -L "https://public.roboflow.com/ds/yJwlTSkNrQ?key=OiVqh5lSem" > roboflow.zi
 ```
 Make sure you have *train*, *test* and *valid* directories on the same level as the *yolov5/* directory.
 
-* or, download the dice dataset from Google drive link by using the _download_dice_dataset.py_ script. This dataset has already been exploded into huge number of images and divided into 3 chunks for training, validation and testing in the 70:20:10 ratio, the data has been exploded by using the same logic as present in the _multiply_dataset.py_ script. Along with this dataset, you'll still need the metadata files fom the Roboflow data directly. So, make sure to downalod those files from the Roboflow link posted above.
+* or, download the dice dataset from Google drive link by using the _[download_dice_dataset.py](https://github.com/guptaaka/dice-detection-using-YOLOv5/blob/master/download_dice_dataset.py)_ script. This dataset has already been exploded into huge number of images and divided into 3 chunks for training, validation and testing in the 70:20:10 ratio, the data has been exploded by using the same logic as present in the _multiply_dataset.py_ script. Along with this dataset, you'll still need the metadata files fom the Roboflow data directly. So, make sure to downalod those files from the Roboflow link posted above.
 
 ```
 cd ..
